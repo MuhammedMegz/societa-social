@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load bootstrap3 %}
+
+
+{% block content %}
+<div class="container">
+    <h1>Sign Up</h1>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <form method="POST" class="col-xs-3">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            <input type="submit"  class="btn btn-primary btn-lg" value="Sign Up" class="btn btn-default">
+        </form>
+      </div>
+</div>
+{% endblock %}
